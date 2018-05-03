@@ -24,11 +24,8 @@ body {
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 0 10px;
-  width: 100%;
-}
+    padding: 0 350px 0 100px;
+  }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
@@ -45,7 +42,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  font-family: "Gravitas One";
   font-size: 30px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
   a {
     color: inherit;
   }
@@ -152,12 +154,17 @@ img {
 
 .wrapper-masthead {
   margin-bottom: 50px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: $lightGray;
 }
 
 .masthead {
-  padding: 20px 0;
+  padding: 10px 0;
   border-bottom: 1px solid $lightGray;
-
+  padding-left: 20px;
+  padding-right: 20px;
+  
   @include mobile {
     text-align: center;
   }
@@ -168,6 +175,7 @@ img {
   width: 70px;
   height: 70px;
   margin-right: 15px;
+  
 
   @include mobile {
     float: none;
@@ -182,7 +190,8 @@ img {
 
 .site-info {
   float: left;
-
+  margin-top: 15px;
+  
   @include mobile {
     float: none;
     display: block;
@@ -240,7 +249,6 @@ nav {
 //
 // .main
 //
-
 .posts > .post {
   padding-bottom: 2em;
   border-bottom: 1px solid $lightGray;
@@ -282,8 +290,23 @@ footer {
   padding: 20px 0;
   text-align: center;
 }
+.pagetitle {
+  line-height: 100%;
+  margin-bottom: 0px;
+}
+.pagedate {
+  line-height: 100%;
+
+}
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
+@import "toc";
+@import "effects";
+@import "relatedPosts";
+@import "tags";
+@import "GravitasOne";
+@import "TagsCloud";
+@import "nav";
